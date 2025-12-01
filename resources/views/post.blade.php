@@ -1,1 +1,1 @@
-<h1>our post page</h1>
+<h1>Our postpage</h1>
