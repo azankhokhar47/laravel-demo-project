@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/post', function () {
 //     // return view('post');
@@ -36,12 +36,53 @@ Route::get('/', function () {
 //     }
 // }); 
 
-Route::get('post/{id}', function (string $id ) {
-    if($id){
-    return "<h1>Post ID : " .$id. "</h1>";
-    }
-    else
-    {
-    return "<h1>No id found</h1> ";
-    }
-})->Where; 
+// Route::get('post/{id}', function (string $id ) {
+//     if($id){
+//     return "<h1>Post ID : " .$id. "</h1>";
+//     }
+//     else
+//     {
+//     return "<h1>No id found</h1> ";
+//     }
+// })->WhereNumber('id', '[0-9]+'); 
+
+
+
+// Route::get('post/{id?}/comment/{commentid?}', function (string $id, string $comment) {
+//     if($id){
+//     return "<h1>Post ID : " .$id. " & Comment : ".$comment."</h1>";
+//     }
+//     else
+//     {
+//     return "<h1>No id found</h1> ";
+//     }
+// })->WhereNumber('id', '[0-9]+')->WhereAlpha('commentid');
+
+
+
+// Route::get('post/{id?}/comment/{commentid?}', function (string $id = null, string $commentid = null) {
+
+//     if ($id) {
+//         return "<h1>Post ID : " . $id . " & Comment : " . $commentid . "</h1>";
+//     } else {
+//         return "<h1>No id found</h1>";
+//     }
+
+// })->whereNumber('id')
+//   ->whereAlpha('commentid');
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
+
+
+Route::get('page/post', function () {
+    return view('post');
+})->name('mypost');
+
+
+Route::get('/test', function () {
+    return view('about');
+});
+
+Route::redirect('/about', '/test', 301);

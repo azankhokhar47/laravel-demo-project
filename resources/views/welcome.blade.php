@@ -1,4 +1,6 @@
-<h1>our first page</h1>
+<h1>First page</h1>
 
 
-<a href="/post">Post page</a>
+
+<a href="/about">About</a>
+<a href="{{ route('mypost') }}">Post</a>
