@@ -1,6 +1,17 @@
-<h1>First page</h1>
+<h1>Home : First page</h1>
 
+{{ 5 + 2 }}
 
+<br><br>
 
-<a href="/about">About</a>
-<a href="{{ route('mypost') }}">Post</a>
+{{"HELLO WORLD"}}
+
+<br><br>
+
+{{"<h1>HELLO WORLD</h1>"}}
+
+{!!"<h1>Azan</h1>"!!}
+
+{{"<script>alert('azan') </script>"}}
+
+{!!"<script>alert('azan') </script>"!!}

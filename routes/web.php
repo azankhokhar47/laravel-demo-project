@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/post', function () {
 //     // return view('post');
@@ -71,18 +71,46 @@ use Illuminate\Support\Facades\Route;
 // })->whereNumber('id')
 //   ->whereAlpha('commentid');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
 
-Route::get('page/post', function () {
-    return view('post');
-})->name('mypost');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
 
 
-Route::get('/test', function () {
-    return view('about');
-});
+// Route::get('page/post', function () {
+//     return view('post');
+// })->name('mypost');
 
-Route::redirect('/about', '/test', 301);
+
+// Route::get('/test', function () {
+//     return view('about');
+// });
+
+// Route::redirect('/about', '/test', 301);
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
+
+// Route::prefix('page')->group(function(){
+
+//     Route::get('/about', function () {
+//     return "<h1>About page</h1>";
+// });
+
+// Route::get('/gallary', function () {
+//     return "<h1>gallary page</h1>";
+// });
+
+// Route::get('/post/firstpost', function () {
+//     return "<h1>first post page</h1>";
+// });
+
+// });
+
+
+// Route::fallback(function(){
+//     return "<h1>Page not found.</h1>";
+// });
