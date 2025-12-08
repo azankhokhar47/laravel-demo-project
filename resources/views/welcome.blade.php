@@ -12,6 +12,26 @@
 
 {!!"<h1>Azan</h1>"!!}
 
-{{"<script>alert('azan') </script>"}}
+<!-- {{"<script>alert('azan') </script>"}}
 
-{!!"<script>alert('azan') </script>"!!}
+{!!"<script>alert('azan') </script>"!!} -->
+
+@php
+      $user = "AZAN";
+@endphp
+
+{{$user}}
+
+
+@php
+      $names = ["azan", "atif", "salman"];
+      $user = "AZAN";
+@endphp
+
+<ul>
+@foreach ($names as $n)
+    <li>{{$n}}</li>
+@endforeach
+</ul>
+
+@{{$users}}
