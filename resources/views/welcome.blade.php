@@ -116,7 +116,28 @@
 @endforeach
 </ul> --}}
 
-@include('pages.header',['name' => 'AZAN '])
+{{-- @include('pages.header',['name' => 'AZAN '])
+
+<h1>Home page</h1>
+
+@include('pages.footer') --}}
+
+
+{{-- @php
+    $fruit = ["Apple","banana","orange","grapes","strawbary"];
+@endphp
+
+@include('pages.header',['names' => $fruit])
+
+<h1>Home page</h1>
+
+@include('pages.footer') --}}
+
+@php
+    $fruit = ["one" =>"Apple","two"=>"banana","three"=>"orange"];
+@endphp
+
+@include('pages.header',['names' => $fruit])
 
 <h1>Home page</h1>
 
