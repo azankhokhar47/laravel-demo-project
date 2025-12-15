@@ -6,6 +6,15 @@
     <p>{{$n}}</p>
 @endforeach --}}
 
+
+{{-- 
 @foreach ($names as $key => $value )
     <p>{{$key}} - {{$value}}</p>
-@endforeach
+@endforeach --}}
+
+{{-- 
+@forelse ($names as $key => $value )
+    <p>{{$key}} - {{$value}}</p>
+@empty
+    <p>No value found</p>
+@endforelse --}}
