@@ -1,4 +1,4 @@
-<h1>Header page</h1>
+{{-- <h1>Header page</h1> --}}
 
 {{-- <p>{{$names}}</p> --}}
 

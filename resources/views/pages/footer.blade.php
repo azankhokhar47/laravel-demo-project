@@ -1,1 +1,1 @@
-<h1>footer page</h1>
+{{-- <h1>footer page</h1> --}}

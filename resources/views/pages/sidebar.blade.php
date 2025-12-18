@@ -1,1 +1,1 @@
-<h1>sidebar page</h1>
+{{-- <h1>sidebar page</h1> --}}

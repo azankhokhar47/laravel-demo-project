@@ -6,12 +6,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/about-us', function () {
     return view('about');
 });
- Route::get('/', function () {
+
+Route::get('/post', function () {
     return view('post');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+
+
+
 // Route::get('/post', function () {
 //     // return view('post');
 //     return "<h1>post page</h1>";
