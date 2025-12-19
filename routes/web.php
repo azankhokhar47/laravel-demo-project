@@ -6,17 +6,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about-us', function () {
-    return view('about');
+Route::get('/users', function () {
+    return view('users');
 });
 
-Route::get('/post', function () {
-    return view('post');
-});
 
-Route::get('/test', function () {
-    return view('test');
-});
+
+// Route::get('/about-us', function () {
+//     return view('about');
+// });
+
+// Route::get('/post', function () {
+//     return view('post');
+// });
+
+// Route::get('/test', function () {
+//     return view('test');
+// });
 
 
 

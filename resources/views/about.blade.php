@@ -4,7 +4,7 @@
 <a href="{{ route('mypost') }}">Post</a> --}}
 
 
-@extends('layouts.masterlayout')
+{{-- @extends('layouts.masterlayout')
 
 @section('content')
     <h2>About page</h2>
@@ -15,4 +15,4 @@
 
 @section('title')
     About
-@endsection
+@endsection --}}

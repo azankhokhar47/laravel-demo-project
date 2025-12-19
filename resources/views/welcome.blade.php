@@ -261,7 +261,7 @@ Aut ea iusto nobis ex sint, atque mollitia vel dolorum tenetur non praesentium e
     </div>
 </body>
 </html> --}}
-
+{{-- 
 @extends('layouts.masterlayout')
 
 @section('content')
@@ -274,3 +274,7 @@ Aut ea iusto nobis ex sint, atque mollitia vel dolorum tenetur non praesentium e
 @section('title')
     Home
 @endsection
+
+@push('scripts')
+    <script src="/example.js"></script>
+@endpush --}}

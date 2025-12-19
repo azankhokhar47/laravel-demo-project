@@ -1,7 +1,7 @@
 {{-- <h1>Postpage</h1> --}}
 
 
-
+{{-- 
 @extends('layouts.masterlayout')
 
 @section('content')
@@ -19,4 +19,4 @@
 @section('sidebar')
      @parent
      <p>This is appended to master sidebar.</p>
-@endsection
+@endsection --}}

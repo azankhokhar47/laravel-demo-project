@@ -37,5 +37,9 @@
         </main>
         <footer>Azan@copyright 2025.</footer>
     </div>
+
+    @stack('scripts')
+
+
 </body>
 </html> 
