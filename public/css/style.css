@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset
 * {
     margin: 0;
     padding: 0;
@@ -7,27 +7,27 @@
 }
 
 /* Wrapper */
-#wrapper {
+/* #wrapper {
     width: 1100px;
     margin: 20px auto;
     background: #f9f9f9;
-    border: 1px solid #ddd;
-}
+    border: 1px solid #ddd; 
+}*/
 
 /* Header */
-header {
+/* header {
     background: #2c3e50;
     color: #fff;
     padding: 20px;
     text-align: center;
-}
-
+} */
+/* 
 header h1 {
     font-size: 32px;
-}
+} */
 
 /* Navigation */
-nav {
+/* nav {
     background: #34495e;
     padding: 10px;
     text-align: center;
@@ -42,16 +42,16 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Main Layout */
-main {
+/* main {
     display: flex;
     padding: 20px;
-}
+} */
 
 /* Article */
-article {
+/* article {
     width: 70%;
     padding-right: 20px;
 }
@@ -64,10 +64,10 @@ article h1 {
 article p {
     line-height: 1.6;
     color: #555;
-}
+} */
 
 /* Sidebar */
-aside {
+/* aside {
     width: 30%;
     background: #ecf0f1;
     padding: 15px;
@@ -89,14 +89,14 @@ aside ul li a {
 
 aside ul li a:hover {
     color: #000;
-}
+} */
 
 /* Footer */
-footer {
+/* footer {
     background: #2c3e50;
     color: #fff;
     text-align: center;
     padding: 12px;
     font-size: 14px;
     margin-top: 230px;
-}
+} */ 

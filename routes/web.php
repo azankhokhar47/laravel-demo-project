@@ -6,9 +6,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/users', function () {
-    return view('users');
+    $name ="azan";
+
+    // return view('users')->with ('user', $name) -> with('city',$Islamabad) ;
+
+    // return view('users')->withUser ($name) ->withCity ($Islamabad) ;
 });
+
+// Route::get('/users', function () {
+//     $name ="azan";
+
+//     return view('users',['user' => $name, 'city' => 'Islamabad']);
+// });
+
+// Route::get('/users', function () {
+    // $name ="azan";
+//     return view('users',['user' => "Azan"]);
+// });
+
 
 
 
