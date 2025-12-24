@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-namespace App\Http\Controllers\PageController;
+use App\Http\Controllers\PageController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return ('welcome');
 });
+
+Route::get('/',[PageController::class,'ShowHome']);
+Route::get('/user',[PageController::class,'Showuser']);
+
+
 
 
 

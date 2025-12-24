@@ -1,4 +1,5 @@
-<h1>users page</h1>
+<h1>Userspage</h1>
+
 {{-- 
 <h3>Hello {{$user}}</h3>
 
