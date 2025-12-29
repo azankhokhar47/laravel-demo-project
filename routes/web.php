@@ -7,11 +7,19 @@ Route::get('/', function () {
     return ('welcome');
 });
 
-Route::get('/',[PageController::class,'ShowHome']);
-Route::get('/user',[PageController::class,'Showuser']);
+Route::controller(PageController::class)->group(function(){
 
+Route::get('/','ShowHome')->name('home');
+Route::get('/blog','ShowBlog')->name('blog');
+Route::get('/user/{id}','Showuser')->name('users');
 
+});
 
+Route::get('/test',TestingController::class);
+
+// Route::get('/',[PageController::class,'ShowHome'])->name('home');
+// Route::get('/blog',[PageController::class,'ShowBlog'])->name('blog');
+// Route::get('/user/{id}',[PageController::class,'Showuser'])->name('users');
 
 
 // Route::get('/users', function () {

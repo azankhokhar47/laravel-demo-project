@@ -1,6 +1,8 @@
 <h1>Home page</h1>
 
 
+<a href="{{ route('blog')}}">Blog</a>
+
 {{-- <h1>Home : First page</h1> --}}
 
 {{-- {{ 5 + 2 }} --}}
