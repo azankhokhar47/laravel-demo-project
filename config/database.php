@@ -27,7 +27,7 @@ return [
     | An example configuration is provided for each database system which
     | is supported by Laravel. You're free to add / remove connections.
     |
-    */
+    */ 
 
     'connections' => [
 

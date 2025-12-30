@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\TestingController;
 
 Route::get('/', function () {
     return ('welcome');
