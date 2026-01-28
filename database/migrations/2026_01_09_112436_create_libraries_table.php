@@ -20,8 +20,9 @@ return new class extends Migration
             $table->bollen('status');
         });
     }
-
-    
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('libraries');
