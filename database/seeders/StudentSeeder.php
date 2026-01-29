@@ -15,13 +15,15 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
         {
-            for($i=1 ; $i<=10 ; $i++){
+            student::factory(7)->create();
 
-                 student::create([
-            'name' => fake()->name(),
-            'email' => fake()->unique()->email(),
-            ]);
-        }
+            // for($i=1 ; $i<=10 ; $i++){
+
+            //      student::create([
+            // 'name' => fake()->name(),
+            // 'email' => fake()->unique()->email(),
+            // ]);
+        // }
             
 
 
