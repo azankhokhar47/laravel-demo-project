@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('stu_id')->references('id')->on('students');
             $table->string('book');
             $table->date('due_date')->nullable();
-            $table->bollen('status');
+            $table->boolean ('status');
         });
     }
     /**
