@@ -1,15 +1,18 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\TestingController;
-
-Route::get('/', [UserController::class.'showUsers']);
-
-Route::get('/update', [UserController::class.'updateUsers']);
+// use App\Http\Controllers\PageController;
+// use App\Http\Controllers\TestingController;
 
 
+
+
+
+
+// Route::get('/', [UserController::class.'showUsers']);
+
+// Route::get('/update', [UserController::class.'updateUsers']);
 
 
 // Route::get('/', function () {
