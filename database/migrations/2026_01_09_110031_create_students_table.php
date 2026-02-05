@@ -6,24 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
+        Schema::dropIfExists('students');
+
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email');
             $table->integer('age');
-            $table->integer('city');
 
+            $table->unsignedBigInteger('city_id');      // must match cities.id
+            $table->unsignedBigInteger('lecturer_id');  // must match lecturers.id
+
+            $table->timestamps();
+
+            $table->foreign('city_id')->references('id')->on('cities')->cascadeOnDelete();
+            $table->foreign('lecturer_id')->references('id')->on('lecturers')->cascadeOnDelete();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('students');

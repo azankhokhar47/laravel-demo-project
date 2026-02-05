@@ -1,12 +1,35 @@
-<h1>All student data</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students List</title>
+</head>
+<body>
+    <h1>Students</h1>
 
-@foreach ($students as $data)
-    <h3>{{$test->id}} |
-        {{$test->name}} |
-        {{$test->email}} |
-        {{$test->city_name}} 
-    </h3>
-@endforeach
+    @if(isset($students) && $students->count() > 0)
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Lecturer</th>
+            </tr>
+            @foreach($students as $student)
+                <tr>
+                    <td>{{ $student->name }}</td>
+                    <td>{{ $student->email }}</td>
+                    <td>{{ $student->age }}</td>
+                    <td>{{ DB::table('cities')->where('id', $student->city_id)->value('city_name') }}</td>
+                    <td>{{ DB::table('lecturers')->where('id', $student->lecturer_id)->value('name') }}</td>
+                </tr>
+            @endforeach
+        </table>
+    @else
+        <p>No students found.</p>
+    @endif
+</body>
+</html>
 
 {{-- 
 <a href="{{ route('blog')}}">Blog</a> --}}

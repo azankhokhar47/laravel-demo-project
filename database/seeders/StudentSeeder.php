@@ -10,77 +10,20 @@ class StudentSeeder extends Seeder
 {
     public function run(): void
     {
-        $json = File::get(database_path('data/students.json'));
-        $students = json_decode($json, true);
+        $path = database_path('json/students.json');
+        $students = json_decode(File::get($path), true);
+
+        // Assign lecturers in round-robin
+        $lecturerIds = [1,2,3,4];
+        $i = 0;
+
+        foreach ($students as &$student) {
+            $student['city_id'] = $student['city']; // map city to city_id
+            unset($student['city']); // remove old key
+            $student['lecturer_id'] = $lecturerIds[$i % count($lecturerIds)];
+            $i++;
+        }
 
         DB::table('students')->insert($students);
     }
 }
-     
-// namespace Database\Seeders;
-
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-// use Illuminate\Database\Seeder;
-// use App\Models\student;
-// use Illuminate\Support\Carbon;
-// use Illuminate\Support\Facades\File;
-
-// class StudentSeeder extends Seeder
-// {
-    /**
-     * Run the database seeds.
-     */
-    // public function run(): void
-    //     {
-    //         student::factory(7)->create();
-
-            // for($i=1 ; $i<=10 ; $i++){
-
-            //      student::create([
-            // 'name' => fake()->name(),
-            // 'email' => fake()->unique()->email(),
-            // ]);
-        // }
-            
-
-
-        //   $json = File::get(path:'database/json/students.json');
-        //   $students = collect(json_decode($json));
-
-
-        // //     $students = collect(
-        // //     [
-        // //         [
-        // //             'name' => 'Azan',
-        // //             'email' => 'azan@gmail.com'
-        // //         ],
-        // //         [
-        // //             'name' => 'Umair',
-        // //             'email' => 'Umair@gmail.com'
-        // //         ],
-        // //         [
-        // //             'name' => 'Shahnazar',
-        // //             'email' => 'Shahnazar@gmail.com'
-        // //         ],
-        // //     ]
-        // // );
-
-        // $students->each(function($student){
-
-        // //  student::insert($student);
-
-        // student::create([
-        //     'name' => $student->name,
-        //     'email' => $student->email
-           
-        // ]);
-
-        // });
-
-    //  student::create([
-    //         'name' => 'Azan',
-    //         'email' => 'azan@gmail.com'
-           
-    //     ]);
-//     }
-// }

@@ -1,12 +1,6 @@
-<?php
-
 use App\Http\Controllers\StudentController;
-use App\Models\student;
-use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\PageController;
-// use App\Http\Controllers\TestingController;
 
-Route::get('/', [StudentController::class.'showStudent']);
+Route::get('/', [StudentController::class, 'index']);
 
 
 
