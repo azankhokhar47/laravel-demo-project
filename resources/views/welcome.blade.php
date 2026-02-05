@@ -1,7 +1,15 @@
-<h1>Home page</h1>
+<h1>All student data</h1>
 
+@foreach ($students as $data)
+    <h3>{{$test->id}} |
+        {{$test->name}} |
+        {{$test->email}} |
+        {{$test->city_name}} 
+    </h3>
+@endforeach
 
-<a href="{{ route('blog')}}">Blog</a>
+{{-- 
+<a href="{{ route('blog')}}">Blog</a> --}}
 
 {{-- <h1>Home : First page</h1> --}}
 

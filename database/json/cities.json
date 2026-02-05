@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 1,
+        "city_name" : "Islamabad"
+    },
+
+    {
+        "id" : 2,
+        "city_name" : "Karachi"
+    },
+
+    {
+        "id" : 3,
+        "city_name" : "Pindi"
+    },
+
+    {
+        "id" : 4,
+        "city_name" : "KpK"
+    }
+]

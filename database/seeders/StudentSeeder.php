@@ -2,20 +2,37 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\student;
-use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class StudentSeeder extends Seeder
 {
+    public function run(): void
+    {
+        $json = File::get(database_path('data/students.json'));
+        $students = json_decode($json, true);
+
+        DB::table('students')->insert($students);
+    }
+}
+     
+// namespace Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Seeder;
+// use App\Models\student;
+// use Illuminate\Support\Carbon;
+// use Illuminate\Support\Facades\File;
+
+// class StudentSeeder extends Seeder
+// {
     /**
      * Run the database seeds.
      */
-    public function run(): void
-        {
-            student::factory(7)->create();
+    // public function run(): void
+    //     {
+    //         student::factory(7)->create();
 
             // for($i=1 ; $i<=10 ; $i++){
 
@@ -65,5 +82,5 @@ class StudentSeeder extends Seeder
     //         'email' => 'azan@gmail.com'
            
     //     ]);
-    }
-}
+//     }
+// }
