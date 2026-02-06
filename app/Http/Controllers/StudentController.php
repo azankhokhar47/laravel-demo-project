@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class StudentController extends Controller
-{
-    public function index()
-    {
-        // Fetch all students from DB
-        $students = DB::table('students')->get();
 
-        // Send students data to view
-        return view('welcome', ['students' => $students]);
+class StudentSeeder extends Controller
+{
+    public function run(): void
+    {
+      $students = DB::select("select * from students");
+
+    //  return $students;
     }
 }
