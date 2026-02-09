@@ -8,12 +8,11 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::dropIfExists('cities');
-
         Schema::create('cities', function (Blueprint $table) {
-            $table->id(); // BIGINT UNSIGNED
-            $table->string('city_name');
+            $table->id();
+            $table->string('name');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

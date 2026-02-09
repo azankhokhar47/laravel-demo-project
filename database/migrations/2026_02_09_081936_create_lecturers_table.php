@@ -8,12 +8,12 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::dropIfExists('lecturers');
-
         Schema::create('lecturers', function (Blueprint $table) {
-            $table->id(); // BIGINT UNSIGNED
+            $table->id();
             $table->string('name');
+            $table->string('email');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

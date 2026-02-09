@@ -1,6 +1,12 @@
-use App\Http\Controllers\StudentController;
+<?php
 
-Route::get('/', [StudentController::class, 'index']);
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
+
+Route::view('/','/adduser');
+Route::post('/add',[UserController::class])->name('addUser');
+
+
 
 
 
